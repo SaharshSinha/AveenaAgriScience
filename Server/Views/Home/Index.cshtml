@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Aveena">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href='@Url.Content("~/public/styles/main.css")' />
+    <link rel="stylesheet" type="text/css" href='@Url.Content("~/public/styles/productsAnimation.css")' />
+    <link rel="stylesheet" type="text/css" href='@Url.Content("~/public/styles/carouselFocus.css")' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://open.mapquestapi.com/sdk/js/v7.2.s/mqa.toolkit.js?key=Fmjtd%7Cluu82l0b20%2Ca0%3Do5-94zl96 "></script>
+    <script src='@Url.Content("~/public/scripts//MapsScript.js")'></script>
+    <title>Aveena Agri Science</title>
+</head>
+<body ng-controller="AveenaHome">
+
+    <header style="display:block; ">
+        <div class="topFiller">
+            <div class="topFillerPattern">
+
+            </div>
+        </div>
+        <nav menu-pointed>
+            <div class="menuPointer" id="menuPointer" style="display:none">
+                <div class="menuPointerInner" id="menuPointerInner"></div>
+            </div>
+            <div id="menuSelected" class="menuSelected"></div>
+
+            <div class="ulContainer">
+                <ul id="mainNavigation" class="smoothFont">
+
+                    <li ng-repeat="menuItem in menuItems" id="{{menuItem.name}}" onmouseover="javascript:focusMenuItem(this);" onclick="javascript:clickedMenuItem(this);">
+                        <a class="menuItem" href="#/home/{{menuItem.link}}">{{menuItem.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="aveenaSmallLogoOuterRound" id="mainLogoOuter" onclick="gotoHome()">
+            <div class="aveenaSmallLogoRound" id="mainLogoInner">
+                <img class="smallLogo" src='@Url.Content("~/public/images//LogoSmallTrasnparent.png")' />
+            </div>
+        </div>
+    </header>
+
+
+    <img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeA.png")' style="top:50px; left:100px" data-topoffset="550" data-depth="0.25" />
+    ><img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeA.png" )' style="top:250px; left:850px" data-topoffset="650" data-depth="0.25" />
+    <img class="backLeaf layer2" src='@Url.Content("~/public/images/leafShadeC.png")' style="top:550px; left:100px" data-topoffset="750" data-depth="0.5" />
+    ><img class="backLeaf layer1" src='@Url.Content("~/public/images/leafShadeB.png")' style="top:650px; left:50px" data-topoffset="700" data-depth="0.8" />
+    ><img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeA.png")' style="top:750px; left:900px" data-topoffset="750" data-depth="0.25" />
+    ><img class="backLeaf layer2" src='@Url.Content("~/public/images/leafShadeC.png")' style="top:950px; left:400px" data-topoffset="850" data-depth="0.5" />
+    ><img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeB.png")' style="top:1150px; left:300px" data-topoffset="800" data-depth="0.25" />
+    ><img class="backLeaf layer1" src='@Url.Content("~/public/images/leafShadeA.png")' style="top:1350px; left:800px" data-topoffset="950" data-depth="0.8" />
+    ><img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeC.png")' style="top:1550px; left:100px" data-topoffset="900" data-depth="0.25" />
+    ><img class="backLeaf layer2" src='@Url.Content("~/public/images/leafShadeB.png")' style="top:1850px; left:800px" data-topoffset="1050" data-depth="0.5" />
+    ><img class="backLeaf layer3" src='@Url.Content("~/public/images/leafShadeA.png")' style="top:1950px; left:100px" data-topoffset="950" data-depth="0.25" />
+
+
+    -->
+    ><section id="HomeSection" ng-style="style()" page-section>
+        <div class="carouselMainWindow">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm0.jpg")' class="carouselFrame">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm1.jpg")' class="carouselFrame">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm2.jpg")' class="carouselFrame">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm3.jpg")' class="carouselFrame">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm4.jpg")' class="carouselFrame">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/farm5.jpg")' class="carouselFrame">
+
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/logoTransparent.png")' data-quadrant="two" class="carouselOverlay">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/overlay1.png")' data-quadrant="four" class="carouselOverlay">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/overlay2.png")' data-quadrant="three" class="carouselOverlay">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/overlay3.png")' data-quadrant="two" class="carouselOverlay">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/overlay4.png")' data-quadrant="one" class="carouselOverlay">
+            <img src='@Url.Content("~/public/images/CarouselSlides/carousels/overlay5.png")' data-quadrant="four" class="carouselOverlay">
+        </div>
+    </section>
+
+    <section id="AboutSection">
+        <div class="aboutBody ">
+
+            We are a fast growing comany, among the only 10 % in our sector who had assistance of
+
+            Scientist and firmly believe in Innovative Products
+
+            <br />
+            <br />
+
+
+            Mr. Awdhesh Kumar Tripathi is the Chief Executive officer of Aveena Agri Science, a
+
+            company in its sector that is being transformed over the past few years from
+
+            merely a local organization to a National company with presence in many states
+
+            of India.
+
+            He had championed the group's strategy for further expansion and has overseen
+
+            its active pipeline of growth and investment opportunities. In addition to
+
+            managing the existing products portfolio, Mr. Tripathi's mandate is to further
+
+            diversify the company's activities and develop new strategic initiatives.
+            <br />
+            <br />
+
+            Mr. Tripathi's career spans over 30 years of experience in strategic leadership within the Sales and Marketing
+
+            in the industry with some major organizations. He was successful in achieving significant bottom line growth
+
+            for the entities under his leadership and was able to build long-term relationships with key distributors of the
+
+            Mr. Tripathi holds a B.Sc. (Ag.) and (A.H.) (Hons.) and Specialization in Seed Production Technique (S.P.T)
+
+            from the most prominent University named G.B Pant University of Agriculture and Technology.
+        </div>
+    </section>
+
+    <section id="ProductsSection" ng-controller="AveenaProducts">
+        <div ng-repeat="cat in catProducts" class="product-cat">
+            <div ng-repeat="product in cat.products " class="products-popup">
+                <product-card></product-card>
+            </div>
+        </div>
+    </section>
+
+    <section id="LocationsSection">
+        <div id="map" class="mapDiv"></div>
+    </section>
+
+    <section id="ContactUsSection">
+        reach on facebook
+    </section>
+
+    <!--<footer>
+        © Copyright AVEENA Agri Science
+    </footer>-->
+</body>
+</html>
+
+<script src='@Url.Content("~/Scripts/jquery-2.1.4.min.js")'></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src='@Url.Content("~/Scripts/angular.min.js")'></script>
+<script src='@Url.Content("~/Scripts/angular-route.min.js")'></script>
+<script src='@Url.Content("~/Scripts/angular-animate.min.js")'></script>
+<script src='@Url.Content("~/public/scripts/MainStyles.js")'></script>
+<script src='@Url.Content("~/public/scripts/controllers.js")'></script>
+<script src='@Url.Content("~/public/scripts/Navigation.js")'></script>
+<script src='@Url.Content("~/public/scripts/backLeaf.js")'></script>
+<script src='@Url.Content("~/Scripts/backLeaf.js")'></script>
+<script src='@Url.Content("~/public/scripts/carouselFocus.js")'></script>
+
